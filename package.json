@@ -2,10 +2,14 @@
   "name": "silver-fox",
   "version": "0.0.0",
   "license": "MIT",
+  "main": ".electron/main.js",
   "scripts": {
+    "electron": "ng build --prod --env=prod --no-sourcemaps && electron .",
+	"electron-aot": "ng build --prod && electron .",
+	"electron-build-win32": "electron-packager dist/ SilverFox --platform=win32 --arch=x64 --asar --overwrite",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,6 +26,8 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "core-js": "^2.4.1",
+    "devextreme": "^17.2.4",
+    "devextreme-angular": "^17.2.4",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
@@ -33,6 +39,8 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "electron": "^1.7.10",
+    "electron-packager": "^10.1.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",

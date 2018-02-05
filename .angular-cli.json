@@ -17,9 +17,11 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "fox",
       "styles": [
-        "styles.css"
+		"styles.scss",
+		"../node_modules/devextreme/dist/css/dx.common.css",
+		"../node_modules/devextreme/dist/css/dx.carmine.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -54,7 +56,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

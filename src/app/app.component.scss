@@ -1,0 +1,21 @@
+.application-window{
+	padding-top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.application-window-section,
+fox-application-sidebar,
+.content-data{
+	height: 100%;
+	float: left;
+}
+
+#workspace{
+	padding: 10px;
+}
+
+.application-sidebar{
+	width: 200px;
+	clear: both;
+}

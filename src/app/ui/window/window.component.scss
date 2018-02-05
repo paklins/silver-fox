@@ -1,0 +1,22 @@
+.window{
+	height: 100%;
+}
+
+.window-header{
+	height: 4%;
+	background: black;
+
+	border-radius: 4px 4px 0 0;
+}
+
+.window-workspace{
+	height: 93%;
+	background: lightgray;
+
+	padding: 10px;
+}
+
+.window-footer{
+	height: 3%;
+	background: black;
+}

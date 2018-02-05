@@ -1,0 +1,29 @@
+@import "./../../styles/default/color.scss";
+@import "./../../styles/default/dimension.scss";
+
+.application-header{
+	background: $application-header;
+}
+
+#hamburger{
+	border: none;
+	margin: 3px;
+	background: transparent;
+	height: $application-header-height;
+}
+
+#hamburger > .dx-button-content:after{
+	content: none;
+}
+
+#hamburger > .dx-button-content{
+	color: lightblue;
+}
+
+#hamburger > .dx-button-content:hover{
+	background: transparent;
+}
+
+#hamburger > .dx-button-content:hover > i{
+	color: white;
+}

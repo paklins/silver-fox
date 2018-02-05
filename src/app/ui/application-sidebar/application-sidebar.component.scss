@@ -1,0 +1,13 @@
+@import "../../styles/default/color.scss";
+@import "./../../styles/default/dimension.scss";
+
+.sidebar-header{
+	background: $application-header;
+	height: $application-header-height + 0.4em;
+}
+
+.sidebar{
+	background: black;
+	height: 100%;
+	transition: width 500ms;
+}
