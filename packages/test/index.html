@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SilverFox</title>
+  <base href="./">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+	html,body,.fox-application-viewport{
+		margin: 0;
+		height: 100%;
+	}
+  
+	.fox-application-header{
+		background: darkblue;
+		height: 3em;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 15em;
+		transition: left 500ms;
+	}
+	
+	.fox-application-sidebar{
+		background: blue;
+		height: 100%;
+		width: 15em;
+		position: fixed;
+		top: 0;
+		transition: width 500ms;
+	}
+	
+	.fox-application-content{
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 3em;
+		left: 15em;
+		transition: left 500ms;
+	}
+	
+	.fox-application-sidebar-header{
+		height: 3em;
+		background: darkblue;
+	}
+	
+	.fox-application-header-hamburger{
+		height: 2.8em;
+		border: 0;
+		background: lightblue;
+		margin-top: 0.4em;
+		width: 2.8em;
+	}
+	
+	.collapsed{
+		width: 3em;
+	}
+	
+	.view-port-collapsed{
+		left: 3em;
+	}
+  </style>
+</head>
+<body class="dx-viewport">
+	<div class="fox-application-viewport">
+		<div id="sidebar" class="fox-application-sidebar">
+			<div class="fox-application-sidebar-header">
+			</div>
+		</div>
+		<div id="header" class="fox-application-header">
+			<button id="mainbutton" class="fox-application-header-hamburger" onclick="expandSidebar()"/>
+		</div>
+		<div id="content" class="fox-application-content"></div>
+	</div>
+	
+	<script>
+		let sidebarExpanded = false;
+	
+		function expandSidebar(){
+			document.getElementById( "sidebar" ).classList.toggle( 'collapsed' );
+			document.getElementById( "header" ).classList.toggle( 'view-port-collapsed' );
+			document.getElementById( "content" ).classList.toggle( 'view-port-collapsed' );
+		}
+	</script>
+</body>
+</html>

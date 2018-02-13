@@ -9,7 +9,10 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+		"favicon.ico",
+		"package.json",
+		"electron.app.js",
+		"splash-screen.html"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -23,7 +26,7 @@
 		"../node_modules/devextreme/dist/css/dx.common.css",
 		"../node_modules/devextreme/dist/css/dx.carmine.css"
       ],
-      "scripts": [],
+      "scripts": [ ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

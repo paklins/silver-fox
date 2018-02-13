@@ -1,29 +1,80 @@
 @import "./../../styles/default/color.scss";
+@import "./../../styles/default/font.scss";
 @import "./../../styles/default/dimension.scss";
 
 .application-header{
+	position: fixed;
+	top: 0;
+	right: 0;
 	background: $application-header;
-}
-
-#hamburger{
-	border: none;
-	margin: 3px;
-	background: transparent;
 	height: $application-header-height;
+	left: $application-sidebar-width + $application-header-hamburger-width;
+	transition: $application-viewport-transition;
+	-webkit-app-region: drag;
 }
 
-#hamburger > .dx-button-content:after{
-	content: none;
+.application-header-expanded{
+	left: $application-sidebar-width-collapsed + $application-header-hamburger-width;
 }
 
-#hamburger > .dx-button-content{
-	color: lightblue;
-}
-
-#hamburger > .dx-button-content:hover{
+.application-header-hamburger{
+	border: none;
+	position: absolute;
 	background: transparent;
+	border-radius: 0;
+	background: $application-header;
+	height: $application-header-height;
+	left: $application-sidebar-width;
+	transition: $application-viewport-transition;
+	width: $application-header-hamburger-width;
+
+	.dx-button-content{
+		color: lightblue;
+		position: absolute;
+		height: auto;
+		top: $application-header-hamburger-top;
+
+		&:after{
+			content: none;
+		}
+
+		&:hover{
+			background: transparent;
+		}
+
+		&:hover{
+			i{
+				color: white;
+			}
+		}
+	}
 }
 
-#hamburger > .dx-button-content:hover > i{
-	color: white;
+.application-header-hamburger-expanded{
+	left: $application-sidebar-width-collapsed;
+}
+
+.header-caption{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: $window-caption-color;
+	padding-left: $window-caption-left-padding;
+	font-weight: $window-caption-font-weight;
+
+	p{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.application-header-buttons-dock{
+	background: white;
+    position: fixed;
+    width: 7rem;
+    height: 2.7rem;
+    right: 0;
+    background: yellow;
+    box-shadow: inset 0 1px 0.9rem rgba(0,0,0,0.6);
+    border: 1px solid rgba(0,0,0,0.5);
 }

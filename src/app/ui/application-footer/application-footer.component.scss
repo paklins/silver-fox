@@ -1,3 +1,27 @@
+@import "./../../styles/default/color.scss";
+@import "./../../styles/default/font.scss";
+@import "./../../styles/default/dimension.scss";
+
 .application-footer{
-	background: darkgray;
+	position: fixed;
+	width: 100%;
+
+	bottom: $application-border-height;
+	background: $application-footer;
+	height: $application-footer-height;
+	left: $application-sidebar-width;
+	transition: $application-viewport-transition;
+}
+
+.application-footer-expanded{
+	left: $application-sidebar-width-collapsed;
+}
+
+.footer-caption{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: $window-caption-color;
+	padding-left: $window-caption-left-padding;
+	font-weight: $window-caption-font-weight;
 }

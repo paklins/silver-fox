@@ -1,22 +1,44 @@
-.window{
+@import "./../../styles/default/color.scss";
+@import "./../../styles/default/font.scss";
+@import "./../../styles/default/dimension.scss";
+
+.window,
+.window-caption{
 	height: 100%;
 }
 
-.window-header{
-	height: 4%;
-	background: black;
+.window-header,
+.window-workspace,
+.window-footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
 
-	border-radius: 4px 4px 0 0;
+.window-header{
+	height: $window-header-height;
+	background: $window-header-color;
+	border-radius: $window-border-radius;
+	top: 0;
 }
 
 .window-workspace{
-	height: 93%;
-	background: lightgray;
-
-	padding: 10px;
+	background: $window-workspace-background;
+	padding: $window-workspace-padding;
+	top: $window-header-height;
+	bottom: $window-footer-height;
 }
 
 .window-footer{
-	height: 3%;
-	background: black;
+	height: $window-footer-height;
+	background: $window-footer-background;
+	bottom: 0;
+}
+
+.window-caption{
+	color: $window-caption-color;
+	padding-left: $window-caption-left-padding;
+	font-weight: $window-caption-font-weight;
+	display: flex;
+	align-items: center;
 }

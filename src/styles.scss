@@ -1,3 +1,6 @@
+$loading-screen-width: 640px;
+$loading-screen-height: 480px;
+
 /* You can add global styles to this file, and also import other style files */
 html,body{
 	height: 100%;
@@ -6,4 +9,57 @@ html,body{
 
 p{
 	margin: 0;
+}
+
+.loading-window{
+	width: $loading-screen-width;
+	height: $loading-screen-height;
+	border: 1px solid lightgrey;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	
+	transform: translate( -50%, -50% );
+}
+
+.logo-info{
+	background: url(./assets/splash.png) center center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.progress{
+  width: 80%;
+  max-width: 85vw;
+  height: 4px;
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  border-radius: 15px;
+  background: rgba(gray, .5);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: black;
+	animation: load 0.3s linear;
+  }
+}
+
+@keyframes load{
+  0%	{ width: 0; }
+  10%	{ width: 5%; }
+  20%	{ width: 15%; }
+  30%	{ width: 25%; }
+  40%	{ width: 30%; }
+  50%	{ width: 44%; }
+  60%	{ width: 50%; }
+  70%	{ width: 72%; }
+  80%	{ width: 84%; }
+  90%	{ width: 92%; }
+  100%	{ width: 100%; }
 }

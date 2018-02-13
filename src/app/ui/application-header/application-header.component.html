@@ -1,9 +1,18 @@
-<div class="application-header">
-	<dx-button id="hamburger"
-		(onClick)="TurnSideBar()"
-		[template]="'buttonTemplate'">
-		<div *dxTemplate="let buttonData of 'buttonTemplate'" class="dx-button-content">
-			<i class="dx-icon dx-icon-menu" style="content: ''"></i> 
-		</div>
-	</dx-button>
+<div class="application-header" [ngClass]="{ 'application-header-expanded': SidebarCollapsed }">
+	<span class="header-caption">
+		<p>Silver FOX Platform - Система управлением склада</p>
+	</span>
+</div>
+
+<dx-button class="application-header-hamburger"
+	[ngClass]="{ 'application-header-hamburger-expanded': SidebarCollapsed }"
+	(onClick)="TurnSideBar()"
+	[template]="'buttonTemplate'">
+	<div *dxTemplate="let buttonData of 'buttonTemplate'" class="dx-button-content">
+		<i class="dx-icon dx-icon-menu" style="content: ''"></i> 
+	</div>
+</dx-button>
+
+<div class="application-header-buttons-dock">
+
 </div>

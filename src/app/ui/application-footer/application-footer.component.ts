@@ -10,7 +10,10 @@ export class ApplicationFooterComponent implements OnInit {
 
   constructor(private ApplicationService: ApplicationService) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
+	public get SidebarCollapsed() : boolean {
+		return this.ApplicationService.SideBarCollapsed;
+	}
 }

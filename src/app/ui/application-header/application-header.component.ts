@@ -15,4 +15,8 @@ export class ApplicationHeaderComponent implements OnInit {
 	public TurnSideBar(){
 		this.ApplicationService.TurnMainSidebar();
 	}
+
+	public get SidebarCollapsed() : boolean {
+		return this.ApplicationService.SideBarCollapsed;
+	}
 }

@@ -1,3 +1,4 @@
+import { ElectronService } from 'ngx-electron';
 import { ServicesModule } from './services/services.module';
 import { FoxUiModule } from './ui/fox-ui.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +7,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
-import { DxFormModule } from 'devextreme-angular';
 
 @NgModule({
 	declarations: [
@@ -16,10 +16,9 @@ import { DxFormModule } from 'devextreme-angular';
 		BrowserModule,
 		FoxUiModule,
 		PagesModule,
-		ServicesModule,
-		DxFormModule
+		ServicesModule
 	],
-	providers: [],
+	providers: [ElectronService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

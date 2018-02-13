@@ -1,84 +1,12 @@
-<!--<dx-box
-    direction="row"
-	width="100%"
-	height="100%"
-    class="application-window">
-	<dxi-item
-		[ratio]="SidebarCollapsed ? 1 : 3"
-		class="application-window-section application-sidebar">
-		<fox-application-sidebar></fox-application-sidebar>
-    </dxi-item>
-    <dxi-item
-        class="application-window-section"
-		[ratio]="6">
-		<fox-application-header></fox-application-header>
-		<div id="workspace" class="content-data">
-			<router-outlet></router-outlet>
-		</div>
-        <fox-application-footer></fox-application-footer>
-    </dxi-item>
-</dx-box>
+<div class="fox-application-viewport">
+	<fox-application-sidebar></fox-application-sidebar>
+	<fox-application-header></fox-application-header>
+	<fox-application-footer></fox-application-footer>
 
-<div class="application-window"
-	width="100%"
-	height="100%">
+	<div class="fox-application-right-border"></div>
+	<div class="fox-application-bottom-border"></div>
 
-	<div class="application-window-section application-sidebar">
-		<fox-application-sidebar></fox-application-sidebar>
-	</div>
-
-	<div class="application-window-section">
-		<fox-application-header></fox-application-header>
-		<div id="workspace" class="content-data">
-			<router-outlet></router-outlet>
-		</div>
-        <fox-application-footer></fox-application-footer>
+	<div class="fox-application-content-data" [ngClass]="{ 'fox-application-content-data-expanded': SidebarCollapsed }">
+		<router-outlet></router-outlet>
 	</div>
 </div>
-
-<dx-box
-    direction="col"
-    width="100%"
-    height="100%">
-    <dxi-item
-        [ratio]="2"
-        [baseSize]="0">
-        <dx-box
-            direction="row"
-            width="100%"
-            height="100%">
-            <dxi-item
-                class="rect demo-dark"
-				[ratio]="SidebarRatio"
-				(onClick)="RatioClick()">
-                Left Bar
-            </dxi-item>
-            <dxi-item
-                class="rect demo-light"
-                [ratio]="ContentRatio">
-                Content
-            </dxi-item>
-        </dx-box>
-    </dxi-item>
-</dx-box> -->
-
-<dx-box
-    direction="row"
-	width="100%"
-	height="100%"
-    class="application-window">
-	<dxi-item
-		[ratio]="1"
-		class="application-window-section application-sidebar">
-		<fox-application-sidebar></fox-application-sidebar>
-    </dxi-item>
-    <dxi-item
-        class="application-window-section"
-		[ratio]="18">
-		<fox-application-header></fox-application-header>
-		<div id="workspace" class="content-data">
-			<router-outlet></router-outlet>
-		</div>
-        <fox-application-footer></fox-application-footer>
-    </dxi-item>
-</dx-box>

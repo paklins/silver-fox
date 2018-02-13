@@ -1,21 +1,36 @@
-.application-window{
-	padding-top: 0;
+@import "./styles/default/color.scss";
+@import "./styles/default/dimension.scss";
+
+.fox-application-viewport{
 	height: 100%;
-	width: 100%;
 }
 
-.application-window-section,
-fox-application-sidebar,
-.content-data{
+.fox-application-content-data{
+	position: fixed;
+	top: $application-header-height + 0.5rem;
+	left: $application-sidebar-width + 0.5rem;
+	bottom: $application-footer-height + 0.5rem;
+	transition: $application-viewport-transition;
+	right: $application-right-border-padding;
+}
+
+.fox-application-content-data-expanded{
+	left: $application-sidebar-width-collapsed + 0.5rem;
+}
+
+.fox-application-right-border{
+	position: fixed;
+	right: 0;
 	height: 100%;
-	float: left;
+    width: $application-border-width;
+    background: $application-header;
 }
 
-#workspace{
-	padding: 10px;
-}
-
-.application-sidebar{
-	width: 200px;
-	clear: both;
+.fox-application-bottom-border{
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+    height: $application-border-height;
+    background: $application-header;
 }

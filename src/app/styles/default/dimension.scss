@@ -1,1 +1,18 @@
-$application-header-height: 2.4em;
+$application-header-height: 3rem;
+$application-header-hamburger-width: 2.5rem;
+$application-header-hamburger-top: .4rem;
+$application-sidebar-width: 15rem;
+$application-sidebar-width-collapsed: 3rem;
+$application-sidebar-transition: width 500ms;
+$application-viewport-transition: left 500ms;
+$application-footer-height: 2rem;
+$application-right-border-padding: 0.7rem;
+$application-border-width: 0.2rem;
+$application-border-height: 0.2rem;
+
+$window-header-height: 2.2rem;
+$window-footer-height: 1.5rem;
+$window-border-radius-unit: 0.6rem;
+$window-border-radius: $window-border-radius-unit $window-border-radius-unit 0 0;
+$window-workspace-padding: 10px;
+$window-caption-left-padding: 1rem;
