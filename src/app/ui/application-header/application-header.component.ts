@@ -7,16 +7,20 @@ import { ApplicationService } from '../../services/application.service';
 	styleUrls: ['./application-header.component.scss']
 })
 export class ApplicationHeaderComponent implements OnInit {
-	constructor(private ApplicationService: ApplicationService) { }
+	constructor(private _ApplicationService: ApplicationService) { }
+
+	public get windowProc(): ApplicationService{
+		return this._ApplicationService;
+	}
 
 	ngOnInit() {
 	}
 
 	public TurnSideBar(){
-		this.ApplicationService.TurnMainSidebar();
+		this.windowProc.TurnMainSidebar();
 	}
 
 	public get SidebarCollapsed() : boolean {
-		return this.ApplicationService.SideBarCollapsed;
+		return this.windowProc.SideBarCollapsed;
 	}
 }

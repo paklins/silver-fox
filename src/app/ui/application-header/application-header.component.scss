@@ -2,6 +2,13 @@
 @import "./../../styles/default/font.scss";
 @import "./../../styles/default/dimension.scss";
 
+.fox-application-header{
+	position: absolute;
+	right: 0;
+	height: $application-header-height;
+	left: $application-sidebar-width;
+}
+
 .application-header{
 	position: fixed;
 	top: 0;
@@ -22,9 +29,9 @@
 	position: absolute;
 	background: transparent;
 	border-radius: 0;
+	left: 0;
 	background: $application-header;
 	height: $application-header-height;
-	left: $application-sidebar-width;
 	transition: $application-viewport-transition;
 	width: $application-header-hamburger-width;
 
@@ -47,6 +54,7 @@
 				color: white;
 			}
 		}
+		
 	}
 }
 
@@ -61,20 +69,21 @@
 	color: $window-caption-color;
 	padding-left: $window-caption-left-padding;
 	font-weight: $window-caption-font-weight;
+	transition: $window-caption-transition;
 
 	p{
-		width: 100%;
+		position: absolute;
 		text-align: center;
+		left: -$application-header-hamburger-width;
+		right: $window-caption-right;
+		top: $window-caption-top;
+		bottom: $window-caption-bottom;
 	}
 }
 
 .application-header-buttons-dock{
-	background: white;
     position: fixed;
-    width: 7rem;
-    height: 2.7rem;
-    right: 0;
-    background: yellow;
+	right: 0.1rem;
+	font-size: 0;
     box-shadow: inset 0 1px 0.9rem rgba(0,0,0,0.6);
-    border: 1px solid rgba(0,0,0,0.5);
 }

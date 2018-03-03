@@ -2,6 +2,10 @@
 @import "./../../styles/default/font.scss";
 @import "./../../styles/default/dimension.scss";
 
+.window{
+	box-shadow: $window-workspace-shadow;
+}
+
 .window,
 .window-caption{
 	height: 100%;

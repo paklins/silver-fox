@@ -1,0 +1,7 @@
+<dx-button class="fox-application-header-system-button"
+	[ngClass]="{ 'fox-application-header-hidden-system-button': !visibility, 'maximize': type == 'maximize', 'minimize': type == 'minimize', 'close': type == 'close' }"
+	[template]="'buttonTemplate'">
+	<div *dxTemplate="let buttonData of 'buttonTemplate'" class="fox-application-header-system-button-content">
+		<i class="dx-icon" [ngClass]="iconName"></i> 
+	</div>
+</dx-button>

@@ -1,0 +1,51 @@
+.fox-application-header-system-button{
+	border: none;
+}
+
+.fox-application-header-hidden-system-button{
+	display: none;
+}
+
+.fox-application-header-system-button-content{
+	background: black;
+	border: none;
+
+	i{
+		content: '';
+	}
+
+	&:after{
+		content: none;
+	}
+
+	&:hover{
+		i{
+			color: white;
+		}
+
+	}
+}
+
+.maximize{
+	&:hover{
+		i{
+			color: blue;
+		}
+	}
+}
+
+.minimize{
+	&:hover{
+		i{
+			color: yellow;
+		}
+	}
+}
+
+.close{
+	&:hover{
+		i{
+			color: red;
+		}
+	}
+}

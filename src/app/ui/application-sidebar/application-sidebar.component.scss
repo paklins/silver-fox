@@ -9,7 +9,7 @@
 .sidebar{
 	position: fixed;
 	top: 0;
-	bottom: $application-border-height;
+	bottom: 0;
 	background: $application-header;
 	transition: $application-sidebar-transition;
 	width: $application-sidebar-width;
@@ -22,8 +22,9 @@
 .sidebar-viewport{
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	left: 0;
+	box-shadow: $application-sidebar-shadow;
     top: $application-header-height;
-    left: $application-border-width;
+    right: $application-border-width;
 	background: $application-sidebar-color;
 }

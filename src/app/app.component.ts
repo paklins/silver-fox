@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DxButtonModule} from 'devextreme-angular';
-import notify from 'devextreme/ui/notify';
 import { ApplicationService } from './services/application.service';
-
-import { ElectronService } from 'ngx-electron'
+import { ElectronService } from 'ngx-electron';
 
 @Component({
 	selector: 'app-root',

@@ -7,6 +7,8 @@
     "app": "./dist"
   },
   "scripts": {
+	"build:prod": "ng build --prod --aot --extract-licenses=false",
+	"minify": "minify dist/",
 	"electron": "electron ./src/electron.app.dev",
     "electron-win": "ng build --prod --aot && electron-packager dist --out=packages --platform=win32 --arch=x64 --overwrite --asar --executable-name=silver-fox --overwrite",
     "electron-aot": "ng build --prod && electron .",

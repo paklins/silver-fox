@@ -2,20 +2,21 @@
 @import "./styles/default/dimension.scss";
 
 .fox-application-viewport{
+	background: #E8EEF2;
 	height: 100%;
 }
 
 .fox-application-content-data{
 	position: fixed;
-	top: $application-header-height + 0.5rem;
-	left: $application-sidebar-width + 0.5rem;
-	bottom: $application-footer-height + 0.5rem;
+	top: $application-header-height + $window-workspace-space;
+	left: $application-sidebar-width + $window-workspace-space;
+	bottom: $application-footer-height + $window-workspace-space;
 	transition: $application-viewport-transition;
-	right: $application-right-border-padding;
+	right: $window-workspace-space + $application-border-height;
 }
 
 .fox-application-content-data-expanded{
-	left: $application-sidebar-width-collapsed + 0.5rem;
+	left: $application-sidebar-width-collapsed + $window-workspace-space;
 }
 
 .fox-application-right-border{
@@ -29,7 +30,7 @@
 .fox-application-bottom-border{
 	position: fixed;
 	right: 0;
-	left: 0;
+	left: $application-sidebar-width;
 	bottom: 0;
     height: $application-border-height;
     background: $application-header;
