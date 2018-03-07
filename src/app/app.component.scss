@@ -1,25 +1,21 @@
 @import "./styles/default/color.scss";
 @import "./styles/default/dimension.scss";
 
-.fox-application-viewport{
+viewport{
 	background: #E8EEF2;
 	height: 100%;
 }
 
-.fox-application-content-data{
+.content-data{
 	position: fixed;
 	top: $application-header-height + $window-workspace-space;
-	left: $application-sidebar-width + $window-workspace-space;
+	left: $application-sidebar-width-collapsed + $window-workspace-space;
 	bottom: $application-footer-height + $window-workspace-space;
 	transition: $application-viewport-transition;
 	right: $window-workspace-space + $application-border-height;
 }
 
-.fox-application-content-data-expanded{
-	left: $application-sidebar-width-collapsed + $window-workspace-space;
-}
-
-.fox-application-right-border{
+.right-border{
 	position: fixed;
 	right: 0;
 	height: 100%;
@@ -27,11 +23,20 @@
     background: $application-header;
 }
 
-.fox-application-bottom-border{
+.bottom-border{
 	position: fixed;
 	right: 0;
-	left: $application-sidebar-width;
+	left: $application-sidebar-width-collapsed;
 	bottom: 0;
     height: $application-border-height;
-    background: $application-header;
+	background: $application-header;
+	transition: $application-viewport-transition;
+}
+
+.expanded{
+	left:  $application-sidebar-width + $window-workspace-space;
+}
+
+.bottom-border.expanded{
+	left: $application-sidebar-width;
 }

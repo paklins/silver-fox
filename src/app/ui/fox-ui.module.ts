@@ -8,6 +8,9 @@ import { ApplicationSidebarComponent } from './application-sidebar/application-s
 import { ApplicationHeaderComponent } from './application-header/application-header.component';
 import { WindowComponent } from './window/window.component';
 import { ApplicationHeaderSystemButtonComponent } from './application-header-system-button/application-header-system-button.component';
+import { CollapsibleSidebarDirective } from '../directives/collapsible-sidebar.directive';
+import { SystemButtonDirective } from '../directives/system-button.directive';
+import { ApplicationHeaderDirective } from '../directives/application-header.directive';
 
 @NgModule({
 	imports: [
@@ -19,14 +22,19 @@ import { ApplicationHeaderSystemButtonComponent } from './application-header-sys
 		  ApplicationSidebarComponent, 
 		  ApplicationHeaderComponent,
 		  WindowComponent,
-		  ApplicationHeaderSystemButtonComponent
+		  ApplicationHeaderSystemButtonComponent,
+		  CollapsibleSidebarDirective,
+		  SystemButtonDirective,
+		  ApplicationHeaderDirective	  
 	],
 	exports:[
 		ApplicationHeaderComponent,
 		ApplicationSidebarComponent,
 		ApplicationFooterComponent,
 		ApplicationHeaderSystemButtonComponent,
-		WindowComponent
+		WindowComponent,
+		CollapsibleSidebarDirective,
+		SystemButtonDirective
 	]
 })
 export class FoxUiModule { }

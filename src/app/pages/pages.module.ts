@@ -15,8 +15,8 @@ const ApplicationRoutes: Routes = [
 		CommonModule,
 		FoxUiModule,
 		RouterModule.forRoot(
-			ApplicationRoutes,
-			{ enableTracing: !environment.production }
+			ApplicationRoutes//,
+			//{ enableTracing: !environment.production }
 		)
 	],
 	exports: [

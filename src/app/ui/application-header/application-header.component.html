@@ -1,33 +1,28 @@
-<div class="fox-application-header">
-	<dx-button class="application-header-hamburger"
-		[ngClass]="{ 'application-header-hamburger-expanded': windowProc.SideBarCollapsed }"
-		(onClick)="windowProc.TurnMainSidebar()"
-		[template]="'buttonTemplate'">
-		<div *dxTemplate="let buttonData of 'buttonTemplate'" class="dx-button-content">
-			<i class="dx-icon dx-icon-menu" style="content: ''"></i> 
-		</div>
-	</dx-button>
+<div CollapsibleSidebar class="header">
+	<div class="hamburger">
+		<dx-button class="menu-button"
+			(onClick)="ApplicationService.TurnMainSidebar()"
+			[template]="'buttonTemplate'">
+			<div *dxTemplate="let buttonData of 'buttonTemplate'" class="menu-button-content">
+				<i class="dx-icon dx-icon-menu" style="content: ''"></i> 
+			</div>
+		</dx-button>
+	</div>
 
-	<div class="application-header" [ngClass]="{ 'application-header-expanded': windowProc.SideBarCollapsed }">
-		<span class="header-caption">
+	<div ApplicationHeader class="title">
+		<span class="caption">
 			<p>Перемещение из машины в ячейку у ворот SKO00040</p>
 		</span>
 	</div>
 
-	<div class="application-header-buttons-dock">
+	<div SystemButton class="buttons-dock">
 		<fox-application-header-system-button 
-			[iconName]="'dx-icon-chevrondown'"
-			[type]="'minimize'"
-			[visibility]="windowProc.isApplication">
+			[iconName]="'dx-icon-chevrondown'">
 		</fox-application-header-system-button>
 		<fox-application-header-system-button 
-			[iconName]="'dx-icon-chevronup'" 
-			[type]="'maximize'"
-			[visibility]="windowProc.isApplication">
+			[iconName]="'dx-icon-chevronup'">
 		</fox-application-header-system-button>
-		<fox-application-header-system-button
-			[type]="'close'"
-			[visibility]="windowProc.isApplication">
+		<fox-application-header-system-button>
 		</fox-application-header-system-button>
 	</div>
 </div>

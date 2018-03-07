@@ -2,88 +2,98 @@
 @import "./../../styles/default/font.scss";
 @import "./../../styles/default/dimension.scss";
 
-.fox-application-header{
+.header{
 	position: absolute;
 	right: 0;
 	height: $application-header-height;
-	left: $application-sidebar-width;
-}
-
-.application-header{
-	position: fixed;
-	top: 0;
-	right: 0;
-	background: $application-header;
-	height: $application-header-height;
-	left: $application-sidebar-width + $application-header-hamburger-width;
+	left: $application-sidebar-width-collapsed;
 	transition: $application-viewport-transition;
-	-webkit-app-region: drag;
-}
-
-.application-header-expanded{
-	left: $application-sidebar-width-collapsed + $application-header-hamburger-width;
-}
-
-.application-header-hamburger{
-	border: none;
-	position: absolute;
-	background: transparent;
-	border-radius: 0;
-	left: 0;
 	background: $application-header;
-	height: $application-header-height;
-	transition: $application-viewport-transition;
-	width: $application-header-hamburger-width;
 
-	.dx-button-content{
-		color: lightblue;
+	.hamburger{
 		position: absolute;
-		height: auto;
-		top: $application-header-hamburger-top;
+		height: $application-header-height;
+		width: $hamburger-width;
+		transition: $application-viewport-transition;
 
-		&:after{
-			content: none;
-		}
-
-		&:hover{
+		.menu-button{
+			border: none;
+			position: absolute;
 			background: transparent;
-		}
+			border-radius: 0;
+			cursor: default;
+			z-index: 1;
 
-		&:hover{
-			i{
-				color: white;
+			background: $application-header;
+			height: $application-header-height;
+			transition: $application-viewport-transition;
+			width: $application-header-hamburger-width;
+		
+			.menu-button-content{
+				color: lightblue;
+				position: absolute;
+				height: auto;
+				cursor: default;
+				top: $application-header-hamburger-top;
+		
+				&:after{
+					content: none;
+				}
+		
+				&:hover{
+					background: transparent;
+				}
+		
+				&:hover{
+					i{
+						color: white;
+					}
+				}
+				
 			}
 		}
-		
 	}
-}
 
-.application-header-hamburger-expanded{
-	left: $application-sidebar-width-collapsed;
-}
-
-.header-caption{
-	height: 100%;
-	display: flex;
-	align-items: center;
-	color: $window-caption-color;
-	padding-left: $window-caption-left-padding;
-	font-weight: $window-caption-font-weight;
-	transition: $window-caption-transition;
-
-	p{
+	.title{
 		position: absolute;
-		text-align: center;
-		left: -$application-header-hamburger-width;
-		right: $window-caption-right;
-		top: $window-caption-top;
-		bottom: $window-caption-bottom;
+		top: 0;
+		right: 0;
+		left: $system-button-width;
+		height: $application-header-height;
+		-webkit-app-region: drag;
+
+		.caption{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			color: $window-caption-color;
+			font-weight: $window-caption-font-weight;
+			transition: $window-caption-transition;
+		
+			p{
+				position: absolute;
+				text-align: center;
+				left: -$application-header-hamburger-width;
+				right: $window-caption-right;
+				top: $window-caption-top;
+				bottom: $window-caption-bottom;
+			}
+		}
+	}
+
+	.title.desktop-application{
+		left: $system-button-width * 3;
+		right: $system-button-width * 3;
+	}
+
+	.buttons-dock{
+		position: fixed;
+		right: 0.1rem;
+		font-size: 0;
+		box-shadow: inset 0 1px 0.9rem rgba(0,0,0,0.6);
 	}
 }
 
-.application-header-buttons-dock{
-    position: fixed;
-	right: 0.1rem;
-	font-size: 0;
-    box-shadow: inset 0 1px 0.9rem rgba(0,0,0,0.6);
+.header.expanded{
+	left: $application-sidebar-width;
 }

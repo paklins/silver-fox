@@ -1,51 +1,25 @@
-.fox-application-header-system-button{
+@import "./../../styles/default/dimension.scss";
+
+.system-button{
 	border: none;
-}
+	width: $system-button-width;
 
-.fox-application-header-hidden-system-button{
-	display: none;
-}
-
-.fox-application-header-system-button-content{
-	background: black;
-	border: none;
-
-	i{
-		content: '';
-	}
-
-	&:after{
-		content: none;
-	}
-
-	&:hover{
+	.system-button-content{
+		background: black;
+		border: none;
+	
 		i{
-			color: white;
+			content: '';
 		}
-
-	}
-}
-
-.maximize{
-	&:hover{
-		i{
-			color: blue;
+	
+		&:after{
+			content: none;
 		}
-	}
-}
-
-.minimize{
-	&:hover{
-		i{
-			color: yellow;
-		}
-	}
-}
-
-.close{
-	&:hover{
-		i{
-			color: red;
+	
+		&:hover{
+			i{
+				color: white;
+			}
 		}
 	}
 }

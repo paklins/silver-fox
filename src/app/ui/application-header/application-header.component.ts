@@ -9,7 +9,7 @@ import { ApplicationService } from '../../services/application.service';
 export class ApplicationHeaderComponent implements OnInit {
 	constructor(private _ApplicationService: ApplicationService) { }
 
-	public get windowProc(): ApplicationService{
+	public get ApplicationService(): ApplicationService{
 		return this._ApplicationService;
 	}
 
@@ -17,10 +17,6 @@ export class ApplicationHeaderComponent implements OnInit {
 	}
 
 	public TurnSideBar(){
-		this.windowProc.TurnMainSidebar();
-	}
-
-	public get SidebarCollapsed() : boolean {
-		return this.windowProc.SideBarCollapsed;
+		this._ApplicationService.TurnMainSidebar();
 	}
 }

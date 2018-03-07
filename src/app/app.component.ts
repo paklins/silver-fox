@@ -8,17 +8,10 @@ import { ElectronService } from 'ngx-electron';
 	styleUrls: ['./app.component.scss']
   })
 export class AppComponent implements OnInit{
-	constructor(private ApplicationService: ApplicationService, private _ElectronService: ElectronService) {}
-
-	public get SidebarCollapsed(): boolean{
-		return this.ApplicationService.SideBarCollapsed;
-	}
+	constructor(
+		private ApplicationService: ApplicationService, 
+		private _ElectronService: ElectronService) {}
 
 	public ngOnInit(): void{
-	}
-
-	public AfterViewInit(){
-		let pong = this._ElectronService.ipcRenderer.sendSync( 'test' );
-		console.log( pong );
 	}
 }

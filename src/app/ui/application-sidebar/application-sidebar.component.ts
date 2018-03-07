@@ -7,13 +7,7 @@ import { ApplicationService } from '../../services/application.service';
 	styleUrls: ['./application-sidebar.component.scss']
 })
 export class ApplicationSidebarComponent implements OnInit {
-	public get Collapsed(): boolean{
-		return this.ApplicationService.SideBarCollapsed;
-	}
-
 	constructor(private ApplicationService: ApplicationService) { }
 
-	ngOnInit() {
-	}
-
+	ngOnInit() {}
 }

@@ -1,12 +1,12 @@
-<div class="fox-application-viewport">
+<div class="viewport">
 	<fox-application-sidebar></fox-application-sidebar>
 	<fox-application-header></fox-application-header>
 	<fox-application-footer></fox-application-footer>
 
-	<div class="fox-application-right-border"></div>
-	<div class="fox-application-bottom-border"></div>
+	<div class="right-border"></div>
+	<div CollapsibleSidebar class="bottom-border"></div>
 
-	<div class="fox-application-content-data" [ngClass]="{ 'fox-application-content-data-expanded': SidebarCollapsed }">
+	<div CollapsibleSidebar class="content-data">
 		<router-outlet></router-outlet>
 	</div>
 </div>
