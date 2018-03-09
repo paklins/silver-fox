@@ -5,7 +5,6 @@
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	background: $application-header;
 	transition: $application-sidebar-transition;
 	width: $application-sidebar-width-collapsed;
 
@@ -18,10 +17,11 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		box-shadow: $application-sidebar-shadow;
-		top: $application-header-height;
-		right: $application-border-width;
+		right: 0;
+		top: $sidebar-position;
+		bottom: $sidebar-position;
 		background: $application-sidebar-color;
+		box-shadow: $application-sidebar-shadow;
 	}
 }
 

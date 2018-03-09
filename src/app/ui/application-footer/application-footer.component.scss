@@ -4,14 +4,14 @@
 
 .footer{
 	position: fixed;
-	width: 100%;
-
 	bottom: $application-border-height;
+	left: $application-sidebar-width-collapsed + $application-border-width;
+	right: $application-border-width;
 	background: $application-footer;
 	height: $application-footer-height;
-	left: $application-sidebar-width-collapsed;
 	transition: $application-viewport-transition;
-
+	border-top: $window-inset-border;
+	
 	.caption{
 		height: 100%;
 		display: flex;
@@ -23,5 +23,5 @@
 }
 
 .expanded{
-	left: $application-sidebar-width;
+	left: $application-sidebar-width + $application-border-width;
 }
