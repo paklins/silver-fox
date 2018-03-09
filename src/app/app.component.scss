@@ -15,43 +15,38 @@ viewport{
 	right: $window-workspace-space + $application-border-height;
 }
 
-.left-border{
-	position: fixed;
-	height: 100%;
-	left: $application-sidebar-width-collapsed;
-    width: $application-border-width;
-	background: $application-header;
-	transition: $application-viewport-transition;
-	border-right: $window-inset-border;
-}
-
-.left-border.expanded{
-	left: $application-sidebar-width;
-}
-
-.right-border{
-	position: fixed;
-	right: 0;
-	height: 100%;
-    width: $application-border-width;
-	background: $application-header;
-	border-left: $window-inset-border;
-}
-
-.bottom-border{
-	position: fixed;
-	right: 0;
-	left: $application-sidebar-width-collapsed;
-	bottom: 0;
-    height: $application-border-height;
-	background: $application-header;
-	transition: $application-viewport-transition;
-}
-
-.expanded{
+.content-data.expanded{
 	left:  $application-sidebar-width + $window-workspace-space;
 }
 
 .bottom-border.expanded{
 	left: $application-sidebar-width;
+}
+
+.viewport-outer-border{
+	position: absolute;
+	right: 0;
+	border: solid $viewport-outer-border-width $application-footer;
+	top: $application-header-height;
+	left: $application-sidebar-width-collapsed;
+	bottom: $application-footer-height;
+	transition: $application-viewport-transition;
+}
+
+.viewport-outer-border.expanded{
+	left: $application-sidebar-width;
+}
+
+.viewport-inset-border{
+	position: absolute;
+	right: 0;
+	border: solid $viewport-inset-border-width $viewport-inset-border;
+	top: $application-header-height + $viewport-outer-border-width;
+	left: $application-sidebar-width-collapsed + $viewport-outer-border-width;
+	bottom: $application-footer-height + $viewport-outer-border-width;
+	transition: $application-viewport-transition;
+}
+
+.viewport-inset-border.expanded{
+	left: $application-sidebar-width + $viewport-outer-border-width;
 }
