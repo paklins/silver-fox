@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar-head</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="692736465">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#253746" xlink:href="#path-1"></use>
+            <path d="M60.3037299,56.9622166 C59.3792464,54.884131 57.4462355,53.3879093 53.4961696,52.4735516 C45.343906,50.6448363 37.2756863,48.8992443 41.1417083,41.8337531 C52.6557301,20.8866499 44.4194225,9 32.0649612,9 C19.7104998,9 11.5582362,20.8866499 22.988214,41.8337531 C26.854236,48.8992443 18.7860163,50.5617128 10.6337527,52.4735516 C6.68368683,53.3879093 4.75067588,54.884131 3.82619237,56.9622166 C3.82619237,56.9622166 0.548478141,62.4483627 1.05274187,75 L31.9809172,75 L62.9090925,75 C63.5814442,62.3652393 60.3037299,56.9622166 60.3037299,56.9622166 Z" id="Shape" fill="#6376EC" fill-rule="nonzero" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

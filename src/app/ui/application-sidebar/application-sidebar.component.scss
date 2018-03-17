@@ -1,16 +1,80 @@
 @import "../../styles/default/color.scss";
 @import "./../../styles/default/dimension.scss";
 
+@function property-value($property, $selector: null) {
+    @return $magic;
+}
+
 .sidebar{
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	transition: $application-sidebar-transition;
 	width: $application-sidebar-width-collapsed;
+	background: $application-sidebar-color;
+	box-shadow: $application-sidebar-shadow;
 
 	.header{
-		background: $application-header;
-		height: $application-header-height;
+		height: $sidebar-header-height;
+		
+		.avatar{
+			position: absolute;
+			height: 2.0rem;
+			width: 2.0rem;
+			top: .5rem;
+			left: .5rem;
+		
+			border-radius: 50%;
+			transition: width 400ms, height 400ms;
+		}
+
+		.avatar.expanded{
+			height: 3.2rem;
+			width: 3.2rem;
+		}
+
+		.user-data{
+			position: absolute;
+			right: 0;
+			left: 4rem;
+			top: 0;
+			height: 4.5rem;
+		
+			color: transparent;
+			visibility: collapse;
+			transition: visibility 500ms;
+			
+			.user-name{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: 0;
+				right: 0;
+				left: 15rem;
+				right: -15rem;
+				text-align: center;
+				transition: left 500ms, right 500ms;
+			}
+
+			.role-presentation{
+				position: absolute;
+				top: property-value( 'height', user-data );
+				color: lightgray;
+				height: 2.0rem;
+				left: 0;
+				right: 0;
+				font-size: 0.7rem;
+			}
+		}
+
+		.user-data.expanded{
+			visibility: visible;
+			color: white;
+			.user-name{
+				left: 0;
+				right: 0;
+			}
+		}
 	}	
 
 	.viewport{
@@ -18,13 +82,12 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		top: $sidebar-position;
+		top: $sidebar-header-height;
 		bottom: $sidebar-position;
-		background: $application-sidebar-color;
-		box-shadow: $application-sidebar-shadow;
+		
 	}
 }
 
-.expanded{
+.sidebar.expanded{
 	width: $application-sidebar-width;
 }

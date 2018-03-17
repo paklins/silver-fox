@@ -26,6 +26,7 @@ viewport{
 .viewport-outer-border{
 	position: absolute;
 	right: 0;
+	
 	border: solid $viewport-outer-border-width $application-footer;
 	top: $application-header-height;
 	left: $application-sidebar-width-collapsed;
@@ -35,18 +36,4 @@ viewport{
 
 .viewport-outer-border.expanded{
 	left: $application-sidebar-width;
-}
-
-.viewport-inset-border{
-	position: absolute;
-	right: 0;
-	border: solid $viewport-inset-border-width $viewport-inset-border;
-	top: $application-header-height + $viewport-outer-border-width;
-	left: $application-sidebar-width-collapsed + $viewport-outer-border-width;
-	bottom: $application-footer-height + $viewport-outer-border-width;
-	transition: $application-viewport-transition;
-}
-
-.viewport-inset-border.expanded{
-	left: $application-sidebar-width + $viewport-outer-border-width;
 }
