@@ -7,12 +7,18 @@ import { ApplicationService } from '../../services/application.service';
 	styleUrls: ['./application-sidebar.component.scss']
 })
 export class ApplicationSidebarComponent implements OnInit {
+	private _MaxUserNameFullname: number = 15;
+
 	constructor(private _ApplicationService: ApplicationService) { }
 
 	ngOnInit() {}
 
 	public get CurrentUserFullName(): string{
-		return this._ApplicationService.CurrentUser.FullName;
+		let CurrentUserName: string = this._ApplicationService.CurrentUser.FullName.substr( 0, this._MaxUserNameFullname - 3 );
+
+		return CurrentUserName.length === this._MaxUserNameFullname -3 
+			?  CurrentUserName.trim() + '...'
+			: CurrentUserName;
 	}
 
 	public get CurrentRole(): string{

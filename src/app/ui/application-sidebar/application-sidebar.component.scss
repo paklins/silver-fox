@@ -1,10 +1,6 @@
 @import "../../styles/default/color.scss";
 @import "./../../styles/default/dimension.scss";
 
-@function property-value($property, $selector: null) {
-    @return $magic;
-}
-
 .sidebar{
 	position: fixed;
 	top: 0;
@@ -13,6 +9,10 @@
 	width: $application-sidebar-width-collapsed;
 	background: $application-sidebar-color;
 	box-shadow: $application-sidebar-shadow;
+
+	.header-layout-background{
+		height: 6.0rem;
+	}
 
 	.header{
 		height: $sidebar-header-height;
@@ -57,20 +57,24 @@
 			}
 
 			.role-presentation{
-				position: absolute;
-				top: property-value( 'height', user-data );
+				position: fixed;
 				color: lightgray;
-				height: 2.0rem;
-				left: 0;
-				right: 0;
+				top: 4.0rem;
+				left: 15rem;
+				right: -15rem;
 				font-size: 0.7rem;
+				text-align: center;
+				transition: left 500ms, right 500ms;
 			}
 		}
 
 		.user-data.expanded{
 			visibility: visible;
 			color: white;
-			.user-name{
+
+			.user-name,
+			.role-presentation{
+				position: absolute;
 				left: 0;
 				right: 0;
 			}
